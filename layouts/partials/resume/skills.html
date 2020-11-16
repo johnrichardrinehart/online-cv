@@ -1,5 +1,4 @@
-{% assign skills = site.data.data.skills %}
-{% if skills %}
+{{ if .Params.skills }}
 <section class="skills-section section">
 
   <h2 class="section-title">
@@ -7,25 +6,25 @@
       <i class="fas fa-circle fa-stack-2x"></i>
       <i class="fas fa-wrench fa-stack-1x fa-inverse"></i>
     </span>
-    {{ skills.title }}
+    {{ .Params.skills.title }}
   </h2>
 
   <div class="skillset">
 
-    {% for skill in skills.toolset %}
+    {{ range $skill := .Params.skills.toolset }}
     <div class="item">
 
-      <h3 class="level-title">{{ skill.name }}</h3>
+      <h3 class="level-title">{{ $skill.name }}</h3>
 
       <div class="level-bar">
-        <div class="level-bar-inner" data-level="{{ skill.level }}">
+        <div class="level-bar-inner" data-level="{{ $skill.level }}">
         </div>
       </div><!--//level-bar-->
 
     </div><!--//item-->
-    {% endfor %}
+    {{ end }}
 
   </div>
 
 </section><!--//skills-section-->
-{% endif %}
+{{ end }}

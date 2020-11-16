@@ -4,7 +4,7 @@
 
 sidebar:
     about: True # set to False or comment line if you want to remove the "how to use?" in the sidebar
-    education: True # set to False if you want education in main section instead of in sidebar
+    education: False  # set to False if you want education in main section instead of in sidebar
 
     # Profile information
     name: Alan Doe
@@ -21,7 +21,7 @@ sidebar:
     gitlab:
     bitbucket:
     twitter: '@webjeda'
-    stack-overflow: # Number/Username, e.g. 123456/alandoe
+    stackoverflow: # Number/Username, e.g. 123456/alandoe
     codewars:
     goodreads: # Number-Username, e.g. 123456-alandoe
 
@@ -45,7 +45,7 @@ sidebar:
       - item: Cooking
         link:
 
-career-profile:
+career_profile:
     title: Career Profile
     summary: |
       Summarise your career here lorem ipsum dolor sit amet, consectetuer
